@@ -33,6 +33,7 @@ export default {
           label: 'STT',
           class: 'td-stt',
           sortable: false,
+          thStyle: "text-align:center",
           thClass: 'hidden-sortable'
         },
         {
@@ -61,6 +62,7 @@ export default {
           key: 'process',
           label: 'Xử lý',
           class: 'td-xuly',
+          thStyle: "text-align:center",
           sortable: false,
           thClass: 'hidden-sortable'
         }

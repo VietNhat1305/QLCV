@@ -366,6 +366,14 @@
     width:  10%;
     padding: 0px;
 }
+.td-xuly {
+    text-align: center;
+    width:  150px;
+}
+.td-stt {
+    text-align: center;
+    width:  50px;
+}
 .table-custom-srollbar-dt::-webkit-scrollbar-thumb
 {
     border-radius: 10px;
