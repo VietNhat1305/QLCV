@@ -124,11 +124,6 @@ export default {
         this.listRole = res.data || [];
       })
     },
-    async getListDonVi(){
-      await  this.$store.dispatch("donViStore/getTreeSelected").then((res) =>{
-        this.listDonVi = res.data || [];
-      })
-    },
     async handleDelete() {
       if (this.model.id != 0 && this.model.id != null && this.model.id) {
         await this.$store.dispatch("userStore/delete",{id :  this.model.id}).then((res) => {
@@ -233,7 +228,6 @@ export default {
   },
   mounted() {
     this.getListRole();
-    this.getListDonVi();
   },
   watch: {
     model: {
@@ -281,13 +275,15 @@ export default {
               </div>
               <div class="col-sm-8">
                 <div class="text-sm-end">
-                  <b-button
-                      type="button"
-                      class="btn-label cs-btn-primary mb-2 me-2"
-                      @click="showModal = true" size="sm"
+                  <!-- <b-button
+                    type="button"
+                    class="btn-label cs-btn-success mb-2 me-2 css-button"
+                    @click="showModal = true"
+                    size="md"
+                    style="border: none;"
                   >
-                    <i class="mdi mdi-plus me-1 label-icon"></i> Tạo tài khoản
-                  </b-button>
+                    <i class="mdi mdi-plus-box label-icon"></i> Tạo tài khoản
+                  </b-button> -->
                   <b-modal
                       v-model="showModal"
                       title="Thông tin tài khoản"
@@ -404,9 +400,9 @@ export default {
             <div class="row">
               <div class="col-12">
                 <div class="row mt-4">
-                  <div class="col-sm-12 col-md-6">
+                  <div class="col-sm-12 col-md-12">
                     <div
-                        class="col-sm-12 d-flex justify-content-left align-items-center"
+                        class="col-sm-12" style="display: flex; justify-content: space-between"
                     >
                       <div
                           id="tickets-table_length"
@@ -428,6 +424,15 @@ export default {
                         >&nbsp;
                         <div style="width: 100px"> dòng </div>
                       </div>
+                      <b-button
+                        type="button"
+                        class="btn-label cs-btn-success mb-2 me-2 css-button"
+                        @click="showModal = true"
+                        size="md"
+                        style="border: none;"
+                      >
+                        <i class="mdi mdi-plus-box label-icon"></i> Tạo tài khoản
+                      </b-button>
                     </div>
                   </div>
                 </div>

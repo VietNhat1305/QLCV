@@ -167,7 +167,7 @@ export default {
       <div class="col-6">
         <div class="card">
           <div class="card-body">
-            <v-jstree :data="treeView"   @item-click="itemClick"   :item-events="itemEvents"
+            <v-jstree :data="treeView"   @item-click="itemClick" :item-events="itemEvents"
                       text-field-name="label"
             ></v-jstree>
 
